@@ -1,0 +1,43 @@
+{
+	"name": "@byojs/modal",
+	"description": "Simple wrapper around SweetAlert2",
+	"version": "0.2.3",
+	"exports": {
+		"./": "./dist/modal.mjs"
+	},
+	"browser": {
+		"@byojs/modal": "./dist/modal.mjs"
+	},
+	"scripts": {
+		"build:all": "node scripts/build-all.js",
+		"build:gh-pages": "npm run build:all && node scripts/build-gh-pages.js",
+		"build": "npm run build:all",
+		"test:start": "npx http-server test/ -p 8080",
+		"test": "npm run test:start",
+		"postinstall": "node scripts/postinstall.js",
+		"prepublishOnly": "npm run build:all"
+	},
+	"dependencies": {
+		"@byojs/toggler": "~0.1.2",
+		"sweetalert2": "~11.13.2"
+	},
+	"devDependencies": {
+		"micromatch": "~4.0.5",
+		"recursive-readdir-sync": "~1.0.6",
+		"terser": "~5.29.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/byojs/modal.git"
+	},
+	"keywords": [
+		"storage"
+	],
+	"bugs": {
+		"url": "https://github.com/byojs/modal/issues",
+		"email": "getify@gmail.com"
+	},
+	"homepage": "https://github.com/byojs/modal",
+	"author": "Kyle Simpson <getify@gmail.com>",
+	"license": "MIT"
+}

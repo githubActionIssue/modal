@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modal: Tests</title>
+</head>
+<body>
+
+<main>
+<h1>Modal: Tests</h1>
+
+<h3><a href="https://github.com/byojs/modal">Github</a></h3>
+
+<hr>
+
+<p>
+	<button type="button" id="run-all-tests-btn">run all tests</button>
+</p>
+<p>
+	<button type="button" id="run-spinner-tests-btn">run spinner tests</button>
+	<button type="button" id="run-toast-modal-tests-btn">run toast-modal tests</button>
+	<button type="button" id="run-notice-modal-tests-btn">run notice-modal tests</button>
+	<button type="button" id="run-error-modal-tests-btn">run error-modal tests</button>
+	<button type="button" id="run-simple-prompt-modal-tests-btn">run simple-prompt-modal tests</button>
+</p>
+
+<div id="test-results"></div>
+
+</main>
+
+<!-------------------------->
+
+<script type="importmap">
+{
+	"imports": {
+		"modal/src": "./src/modal.js",
+		"modal/dist": "./dist/modal.mjs",
+
+		"@byojs/toggler": "./dist/external/@byojs/toggler/toggler.mjs",
+		"@byojs/scheduler": "./dist/external/@byojs/toggler/external/@byojs/scheduler/scheduler.mjs",
+
+		"sweetalert2": "./dist/external/esm.swal.mjs"
+	}
+}
+</script>
+<script type="module" src="./test.js"></script>
+
+</body>
+</html>
